@@ -2,10 +2,16 @@
 
 namespace Database\Seeders;
 
+use App\Models\Iklan;
+use App\Models\Jenis;
+use App\Models\Kategori;
 use App\Models\User;
+use App\Models\user_type;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+
+use function PHPSTORM_META\type;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,12 +20,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
+        User::create([
+            'type' => 'admin',
             'name' => 'admin',
             'email' => 'admin@gmail.com',
-            'password' => Hash::make('admin#123')
+            'password' => bcrypt('admin#123'),
         ]);
     }
 }

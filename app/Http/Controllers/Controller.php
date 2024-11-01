@@ -10,5 +10,5 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 
 abstract class Controller
 {
-  
+
 }

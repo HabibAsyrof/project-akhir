@@ -1,0 +1,236 @@
+/* keseluruhan */
+body {
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+/* iklan */
+.slider {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+.slide img {
+    width: 600px;
+    height: 210px;
+    display: block;
+}
+#button-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.647);
+    font-weight: bolder;
+    border: none;
+    padding: 3px;
+    cursor: pointer;
+    z-index: 1000;
+}
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
+@media (max-width: 600px) {
+    button {
+        padding: 5px;
+    }
+}
+.iklan {
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+.slider {
+    width: 600px;
+    display: flex;
+    z-index: 1;
+}
+
+/* layout.css */
+.navbar {
+    padding-bottom: 10px;
+    background-color: white;
+}
+.container-halaman-utama {
+    width: 600px;
+    background-color: white;
+    height: max-content;
+}
+
+/* nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    padding-top: 20px;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 40px;
+}
+.bars:hover{
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+.sidebar {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: black;
+    width: 300px;
+    justify-content: center;
+    gap: 50px;
+    top: 0;
+    align-items: center;
+    left: -100%;
+    z-index: 99;
+    transition: 0.5s;
+}
+.sidebar a {
+    text-decoration: none;
+}
+.sidebar.active {
+    left: 0%;
+}
+a {
+    color: white;
+}
+
+.bars {
+    font-size: 25px;
+}
+
+/* katagori hp $ JenisHp */
+.judul-hp {
+    background-color: white;
+    padding-bottom: 15px;
+    border: solid rgb(233, 233, 233) 1px;
+}
+
+.fakmen {
+    color: rgb(77, 77, 77);
+    padding: 20px;
+}
+
+.jenishp {
+    width: 70px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.jenishp:hover {
+    cursor: pointer;
+}
+
+.jenishp img {
+    width: 40px;
+}
+
+.nama {
+    font-size: 13px;
+    color: rgb(77, 77, 77);
+}
+
+.nama-hp {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 0 50px;
+}
+
+/* kategori Hp 1 $ JenisHp1 */
+
+.harga {
+    font-size: 10px;
+}
+
+.hp {
+    border: solid rgb(233, 233, 233) 1px;
+    width: 295px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.hp .jenishp1 {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.jenishp11 {
+    padding: 0px 20px;
+}
+
+.jenis-hp {
+    display: flex;
+    width: 600px;
+}
+
+.jenishp1 img {
+    width: 100px;
+    height: 150px;
+    margin-top: 10px;
+}
+
+.nama-hp1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button-beli {
+    height: 30px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+
+.judul-hp1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 600px;
+}
+
+.serahbiblah {
+    display: flex;
+    justify-content: center;
+}

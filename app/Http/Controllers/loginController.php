@@ -8,8 +8,9 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class loginController extends Controller
 {
-    public function login(){
-        return view('signin');
+    public function login()
+    {
+        return view('auth/signin');
     }
     public function authenticate(Request $request): RedirectResponse
     {
@@ -17,15 +18,32 @@ class loginController extends Controller
             'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
- 
+
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
- 
-            return redirect()->intended('halaman-utama');
+            if (Auth::user()->type == 'user') {
+
+                return redirect('/');
+            } else {
+                return redirect()->intended('/admin');
+            }
         }
- 
+
         return back()->withErrors([
             'email' => 'email / password salah.',
         ])->onlyInput('email');
+    }
+    /**
+     * Log the user out of the application.
+     */
+    public function logout(Request $request): RedirectResponse
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/');
     }
 }

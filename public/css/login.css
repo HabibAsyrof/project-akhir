@@ -1,0 +1,54 @@
+body,*,html {
+    margin: 0;
+    padding: 0;
+}
+.container-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    align-items: center;
+    background-color: #eee;
+}
+form {
+    background-color: #ffff;
+    height: 400px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    border-radius: 5px;
+}
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.judul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input {
+    font-size: 20px;
+    padding: 10px;
+    border: solid 1px rgb(196, 195, 195);
+    border-radius: 5px;
+}
+.login-btn {
+    font-size: 20px;
+    padding: 10px 30px 10px 30px;
+    border: solid 1px rgb(196, 195, 195);
+    border-radius: 5px;
+}
+.regis {
+    display: flex;
+    gap: 4rem;
+    padding-bottom: 15px;
+}
+.error {
+    padding: 10px;
+    color: crimson;
+}
